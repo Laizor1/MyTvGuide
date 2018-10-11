@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/actor_card_view"
+        app:cardUseCompatPadding="true"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:padding="10dp"
+            android:layout_height="match_parent">
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/my_list_image"
+                app:srcCompat="@drawable/tv"
+                android:adjustViewBounds="true"
+                android:padding="3dp"
+                android:maxWidth="150dp"
+                android:maxHeight="150dp"
+                android:scaleType="fitCenter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/txtShow"
+                android:textSize="20dp"
+                android:layout_toRightOf="@+id/my_list_image"
+                android:textStyle="bold"
+                android:paddingBottom="0dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/txtGenre"
+                android:textSize="18dp"
+                android:layout_toRightOf="@+id/my_list_image"
+                android:layout_below="@+id/txtShow"
+                android:paddingBottom="1dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/my_list_date"
+                android:textSize="14dp"
+                android:layout_toRightOf="@+id/my_list_image"
+                android:ellipsize="end"
+                android:maxLines="5"
+                android:gravity="center"
+                android:layout_below="@+id/txtGenre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <Button
+                android:id="@+id/my_list_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Remove"
+                android:layout_below="@+id/my_list_image" />
+            <ToggleButton
+                android:id="@+id/my_list_toggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textOn="Watched"
+                android:textOff="Not Watched"
+                android:layout_toRightOf="@+id/my_list_button"
+                android:layout_below="@+id/my_list_image" />
+
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

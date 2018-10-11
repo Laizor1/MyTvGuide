@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.stefan.newapp3.ShowCardViewInfo">
+
+    <ImageView
+        android:id="@+id/show_image"
+        android:layout_width="214dp"
+        android:layout_height="198dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/tv" />
+
+    <TextView
+        android:id="@+id/search_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="204dp"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/search_years"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_name" />
+
+    <TextView
+        android:id="@+id/search_genre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_rating" />
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:paddingTop="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.58">
+
+        <TextView
+            android:id="@+id/search_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:textSize="13dp" />
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/search_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_years" />
+
+    <TextView
+        android:id="@+id/search_country"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textAlignment="viewEnd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.961"
+        app:layout_constraintStart_toEndOf="@+id/search_rating"
+        app:layout_constraintTop_toBottomOf="@+id/search_episode" />
+
+    <TextView
+        android:id="@+id/search_releaser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textAlignment="viewEnd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.961"
+        app:layout_constraintStart_toEndOf="@+id/search_genre"
+        app:layout_constraintTop_toBottomOf="@+id/search_country" />
+
+    <TextView
+        android:id="@+id/search_episode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="228dp"
+        android:textAlignment="viewEnd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/search_years"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/horizontal_shows_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="145dp"
+        android:layout_below="@+id/scrollview"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.85" />
+
+    <Button
+        android:id="@+id/add_to_plist"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="9dp"
+        android:text="Add to Personal List"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollview"
+        app:layout_constraintVertical_bias="1.0" />
+
+</android.support.constraint.ConstraintLayout>
